@@ -1,0 +1,20 @@
+.nav-bar {
+  background-color: #4d4949;
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  min-height: 500px;
+}
+.logo {
+  display: block;
+  padding: 8px 0;
+}
+.logo h1 {
+  display: block;
+  margin-top: -2px;
+  width: 100px;
+  height: auto;
+  color: aqua;
+}
