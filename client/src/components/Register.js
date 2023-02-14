@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../Assets/Style/login.css";
 import axios from "axios";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+
 import "../Assets/Style/form.css";
 import { useNavigate } from "react-router-dom";
 
@@ -42,17 +41,6 @@ const Register = () => {
           data,
         },
       });
-
-      // toast.success("Logged In successfully", {
-      //   position: "top-center",
-      //   autoClose: 5000,
-      //   hideProgressBar: false,
-      //   closeOnClick: true,
-      //   pauseOnHover: true,
-      //   draggable: true,
-      //   progress: undefined,
-      //   theme: "light",
-      // });
     });
     console.log("signuser login", userDetails);
   };
@@ -65,38 +53,15 @@ const Register = () => {
   const signUpHandler = (e) => {
     e.preventDefault();
 
-    // debugger;
     console.log(" if comdition");
 
     axios.post(`http://localhost:5005/add`, userSignInDetails).then((res) => {
       console.log("login", res);
       if (userSignInDetails.email !== "") {
-        //   toast.success("Account created successfully", {
-        //     position: "top-center",
-        //     autoClose: 5000,
-        //     hideProgressBar: false,
-        //     closeOnClick: true,
-        //     pauseOnHover: true,
-        //     draggable: true,
-        //     progress: undefined,
-        //     theme: "light",
-        //   });
       } else {
         console.log("else comdition");
-        //   toast.error("🦄 Wow so easy!", {
-        //     position: "top-right",
-        //     autoClose: 5000,
-        //     hideProgressBar: false,
-        //     closeOnClick: true,
-        //     pauseOnHover: true,
-        //     draggable: true,
-        //     progress: undefined,
-        //     theme: "light",
-        //   });
       }
     });
-
-    // setUserSignInDetails("");
   };
 
   const signhandleInputChange = (event) => {
